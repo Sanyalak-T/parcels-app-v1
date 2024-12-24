@@ -1,0 +1,52 @@
+/** @format */
+
+/* report  */
+.main {
+  text-align: center;
+}
+.main h3 {
+  opacity: 0.7;
+  background-color: #55f3b9;
+  padding: auto;
+  margin: 0;
+  padding: 8px;
+}
+
+.main select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #b8f0da;
+  outline: none;
+  color: #444;
+  border: none;
+  padding: 10px;
+}
+
+.main-layout {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-layout div {
+  display: flex;
+}
+
+.main-layout div p {
+  opacity: 0.8;
+  margin-right: 5px;
+}
+
+.main-layout div button {
+  padding: 12px 8px;
+  background-color: #b8f0da;
+  border-radius: 3px;
+  border: none;
+}
+
+.main-layout div button:hover {
+  opacity: 0.8;
+  background-color: #04aa6d;
+  color: #f2f2f2;
+}

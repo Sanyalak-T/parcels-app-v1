@@ -1,0 +1,206 @@
+/** @format */
+
+.topnav button span {
+    background-color: #04aa6d;
+    color: #fff;
+  }
+  
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #04aa6d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: small;
+    /* Position the tooltip */
+    position: absolute;
+    /* z-index: 1; */
+    /* top: 50px; */
+    margin-left: -90px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  .main {
+    margin-left: 200px;
+  }
+  
+  .main nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 43px;
+  }
+  
+  nav button {
+    background-color: #55f3b9;
+    border: none;
+    color: #333;
+    padding: 9px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    opacity: 0.8;
+    background-color: #04aa6d;
+    color: #f2f2f2;
+  }
+  
+  nav label {
+    margin-right: 30px;
+  }
+  
+  /* add organization model  */
+  .modalcontainer {
+    display: none;
+    position: absolute;
+    float: left;
+    left: 55%;
+    top: 60%;
+    z-index: 1;
+    width: 850px;
+    height: 500px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card {
+    width: 800px;
+    background-color: #e2e5e5;
+    padding: 15px;
+  }
+  
+  .card nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+  }
+  
+  .card nav:first-child {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a3a2a2;
+  }
+  
+  .card nav:first-child button {
+    background-color: #ecbc63;
+    border: none;
+    color: #333;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .card nav:first-child button:hover {
+    color: #fff;
+  }
+  
+  .card nav:last-child {
+    justify-content: right;
+    margin-top: 20px;
+    border-top: 1px solid #a3a2a2;
+  }
+  
+  .card nav input[type='submit'] {
+    margin-right: 10px;
+    background-color: #178a38;
+    border: none;
+    color: #333;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .card nav input[type='submit']:hover {
+    background-color: #0fae3c;
+  }
+  
+  .card nav:last-child button {
+    margin-right: 10px;
+    background-color: #2a9648;
+    border: none;
+    color: #333;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .modaltable {
+    width: 100%;
+  }
+  
+  .modaltable td {
+    border: none;
+    padding: 0;
+  }
+  
+  .modaltable td:first-child {
+    width: 30%;
+  }
+  
+  .modaltable input[type='text'] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .modaltable input[type='text']:focus {
+    outline-style: none;
+    border: 1px solid #04aa6d;
+  }
+  
+  #versionnumber {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: smaller;
+    color: #222;
+    padding-left: 10px;
+  }
+  
+  .orgTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .orgTable th,
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .orgTable tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  .lastsidenav {
+    opacity: 0.8;
+    border-bottom: 1px solid #d4d1d1;
+  }

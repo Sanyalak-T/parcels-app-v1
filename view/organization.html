@@ -1,0 +1,187 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="content-security-policy|content-type|default-style|refresh"
+    />
+    <title>Parcels App | Organization Page</title>
+    <link
+      rel="icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/organization.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/app.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Parcels App</p>
+      <p>Admin</p>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a
+        href="../view/home.html"
+        id="firstsidenav"
+        >หน้าหลัก</a
+      >
+      <button type="button" class="dropdown-btn">
+        องค์กร
+      </button>
+      <div class="dropdown-container">
+        <a
+          href="../view/organization.html"
+          class="active"
+          >&nbsp; หน่วยงาน</a
+        >
+        <a href="../view/department.html"
+          >&nbsp; ฝ่าย</a
+        >
+        <a href="../view/parceltype.html"
+          >&nbsp; ประเภทพัสดุ</a
+        >
+      </div>
+      <a href="../view/parcel.html"
+        >การบันทึกพัสดุ</a
+      >
+      <a href="../view/parcelreport.html"
+        >พิมพ์รายงานพัสดุ</a
+      >
+      <a href="#" id="logout" class="lastsidenav"
+        >ออกจากระบบ</a
+      >
+    </div>
+
+    <div class="main">
+      <nav>
+        <button id="orgmodalform" type="button">
+          เพิ่มหน่วยงาน
+        </button>
+        <p>รายชื่อหน่วยงาน</p>
+      </nav>
+
+      <div
+        id="modalcontainer"
+        class="modalcontainer"
+      >
+        <div id="modal-content" class="card">
+          <form
+            class="addorgform"
+            autocomplete="off"
+          >
+            <nav>
+              <label href="#" for="closemodal"
+                >เพิ่มข้อมูล</label
+              >
+              <button
+                id="closemodal"
+                type="button"
+                name="closemodal"
+              >
+                X
+              </button>
+            </nav>
+
+            <table class="modaltable">
+              <tr>
+                <td>
+                  <label for="highersection"
+                    >ส่วนราชการ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="highersection"
+                    id="highersection"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="organizationname"
+                    >หน่วยงาน</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="organizationname"
+                    id="organizationname"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="organizationremark"
+                    >หมายเหตุ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="organizationremark"
+                    id="organizationremark"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+            <nav>
+              <button
+                type="submit"
+                id="btnSaveCompany"
+              >
+                บันทึก
+              </button>
+              <button
+                type="button"
+                id="btnClearCompany"
+              >
+                ล้างข้อมูล
+              </button>
+            </nav>
+          </form>
+        </div>
+      </div>
+
+      <table class="orgTable">
+        <thead>
+          <th>No.</th>
+          <th>Actions</th>
+          <th>ส่วนราชการ</th>
+          <th>หน่วยงาน</th>
+          <th>หมายเหตุ</th>
+        </thead>
+        <tbody
+          id="table-body"
+          class="table-body"
+        ></tbody>
+      </table>
+    </div>
+
+    <span id="versionnumber"
+      >parcels app v.1.17102566</span
+    >
+
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/organization.js"></script>
+  </body>
+</html>

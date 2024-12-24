@@ -1,0 +1,267 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="content-security-policy|content-type|default-style|refresh"
+    />
+    <title>Parcels App | Parcels Page</title>
+    <link
+      rel="icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/parcel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/app.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Parcels App</p>
+      <p>Admin</p>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a
+        href="../view/home.html"
+        id="firstsidenav"
+        >หน้าหลัก</a
+      >
+      <button type="button" class="dropdown-btn">
+        องค์กร
+      </button>
+      <div class="dropdown-container">
+        <a href="../view/organization.html"
+          >&nbsp; หน่วยงาน</a
+        >
+        <a href="../view/department.html"
+          >&nbsp; ฝ่าย</a
+        >
+        <a href="../view/parceltype.html"
+          >&nbsp; ประเภทพัสดุ</a
+        >
+      </div>
+      <a href="../view/parcel.html" class="active"
+        >การบันทึกพัสดุ</a
+      >
+      <a href="../view/parcelreport.html"
+        >พิมพ์รายงานพัสดุ</a
+      >
+      <a href="#" id="logout" class="lastsidenav"
+        >ออกจากระบบ</a
+      >
+    </div>
+
+    <div class="main">
+      <nav>
+        <button
+          id="parcelmodalform"
+          type="button"
+        >
+          เพิ่มพัสดุ
+        </button>
+        <p>รายการพัสดุ</p>
+      </nav>
+
+      <div
+        id="modalcontainer"
+        class="modalcontainer"
+      >
+        <div id="modal-content" class="card">
+          <form
+            class="addparcelform"
+            autocomplete="off"
+          >
+            <nav>
+              <label>เพิ่มข้อมูล</label>
+              <button
+                id="closemodal"
+                type="button"
+              >
+                X
+              </button>
+            </nav>
+
+            <table class="modaltable">
+              <tr>
+                <td>
+                  <label for="arrivaldate"
+                    >วดป.ที่ได้รับ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="date"
+                    name="arrivaldate"
+                    id="arrivaldate"
+                    autocomplete="off"
+                    value=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="numberorcode"
+                    >เลขที่ หรือรหัส</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="numberorcode"
+                    id="numberorcode"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="parceltype"
+                    >ประเภทพัสดุ</label
+                  >
+                </td>
+                <td>
+                  <select
+                    id="parceltype"
+                    name="parcletype"
+                  >
+                    <option value="">
+                      กรุณาเลือก...
+                    </option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="nameparcel"
+                    >ชื่อพัสดุ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="nameparcel"
+                    id="nameparcel"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label
+                    for="brandtypemodelsizedescrip"
+                    >ยี่ห้อ ชนิดฯ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="brandtypemodelsizedescrip"
+                    id="brandtypemodelsizedescrip"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="unitprice"
+                    >ราคาต่อหน่วย (บาท)</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="unitprice"
+                    id="unitprice"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="howtoget"
+                    >วิธีการได้มา</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="howtoget"
+                    id="howtoget"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+            <nav>
+              <button
+                type="submit"
+                id="saveparcel"
+              >
+                บันทึก
+              </button>
+              <button
+                type="button"
+                id="resetparcel"
+              >
+                ล้างข้อมูล
+              </button>
+            </nav>
+          </form>
+        </div>
+      </div>
+
+      <table class="parcelTable">
+        <thead>
+          <th>No.</th>
+          <th>Actions</th>
+          <th>วดป.ที่ได้รับ</th>
+          <th title="หรือรหัส">เลขที่*</th>
+          <th>ประเภทพัสดุ</th>
+          <th>ชื่อพัสดุ</th>
+          <th
+            title="ยี่ห้อ ชนิด แบบ ขนาดและลักษณะ"
+          >
+            ยี่ห้อ ชนิด*
+          </th>
+          <th>ราคา/หน่วย(บาท)</th>
+          <th>วิธีการได้มา</th>
+        </thead>
+        <tbody
+          id="table-body"
+          class="table-body"
+        ></tbody>
+      </table>
+    </div>
+
+    <span id="versionnumber"
+      >parcels app v.1.17102566</span
+    >
+
+    <script src="../node_modules/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../node_modules/pdfmake/build/vfs_fonts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.8/dayjs.min.js"
+      integrity="sha512-af90l7+r/ujCury3kqomcoZ4aNuC4JP0xUUU682bqlRCLLvGJrc9L82zONFccLWmxcMXSqO9d6C7Rr39EkbT3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      dayjs().toDate();
+    </script>
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/parcel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="content-security-policy|content-type|default-style|refresh"
+    />
+    <title>Parcels App | Home Page</title>
+    <link
+      rel="icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/home.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Parcels App</p>
+      <p>Admin</p>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a
+        href="../view/home.html"
+        id="firstsidenav"
+        class="active"
+        >หน้าหลัก</a
+      >
+      <button type="button" class="dropdown-btn">
+        องค์กร
+      </button>
+      <div class="dropdown-container">
+        <a href="../view/organization.html"
+          >&nbsp; หน่วยงาน</a
+        >
+        <a href="../view/department.html"
+          >&nbsp; ฝ่าย</a
+        >
+        <a href="../view/parceltype.html"
+          >&nbsp; ประเภทพัสดุ</a
+        >
+      </div>
+      <a href="../view/parcel.html"
+        >การบันทึกพัสดุ</a
+      >
+      <a href="../view/parcelreport.html"
+        >พิมพ์รายงานพัสดุ</a
+      >
+      <a href="#" id="logout" class="lastsidenav"
+        >ออกจากระบบ</a
+      >
+    </div>
+
+    <div class="main">
+      <section class="image-main">
+        <a href="../view/organization.html"
+          >หน่วยงาน</a
+        >
+        <a href="../view/department.html">ฝ่าย</a>
+      </section>
+      <section class="image-main">
+        <a href="../view/parceltype.html"
+          >ประเภทพัสดุ</a
+        >
+        <a href="../view/parcel.html"
+          >การบันทึกพัสดุ</a
+        >
+        <a href="../view/parcelreport.html"
+          >พิมพ์รายงานครุภัณฑ์</a
+        >
+      </section>
+    </div>
+
+    <span id="versionnumber"
+      >parcels app v.1.17102566</span
+    >
+
+    <script src="../scripts/home.js"></script>
+  </body>
+</html>

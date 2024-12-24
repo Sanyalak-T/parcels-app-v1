@@ -1,0 +1,170 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="content-security-policy|content-type|default-style|refresh"
+    />
+    <title>Parcels App | Department Page</title>
+    <link
+      rel="icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/department.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/app.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Parcels App</p>
+      <p>Admin</p>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a
+        href="../view/home.html"
+        id="firstsidenav"
+        >หน้าหลัก</a
+      >
+      <button type="button" class="dropdown-btn">
+        องค์กร
+      </button>
+      <div class="dropdown-container">
+        <a href="../view/organization.html"
+          >&nbsp; หน่วยงาน</a
+        >
+        <a
+          href="../view/department.html"
+          class="active"
+          >&nbsp; ฝ่าย</a
+        >
+        <a href="../view/parceltype.html"
+          >&nbsp; ประเภทพัสดุ</a
+        >
+      </div>
+      <a href="../view/parcel.html"
+        >การบันทึกพัสดุ</a
+      >
+      <a href="../view/parcelreport.html"
+        >พิมพ์รายงานพัสดุ</a
+      >
+      <a href="#" id="logout" class="lastsidenav"
+        >ออกจากระบบ</a
+      >
+    </div>
+
+    <div class="main">
+      <nav>
+        <button
+          id="departmentmodalform"
+          type="button"
+        >
+          เพิ่มฝ่าย
+        </button>
+        <p for="">รายชื่อฝ่าย</p>
+      </nav>
+
+      <div
+        id="modalcontainer"
+        class="modalcontainer"
+      >
+        <div id="modal-content" class="card">
+          <form
+            class="adddepartmentform"
+            autocomplete="off"
+          >
+            <nav>
+              <label>เพิ่มข้อมูล</label>
+              <button
+                id="closemodal"
+                type="button"
+              >
+                X
+              </button>
+            </nav>
+
+            <table class="modaltable">
+              <tr>
+                <td>
+                  <label for="departmentname"
+                    >ฝ่าย</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="departmentname"
+                    id="departmentname"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="departmentremark"
+                    >หมายเหตุ</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="departmentremark"
+                    id="departmentremark"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+            <nav>
+              <button
+                type="submit"
+                id="btnSaveDepartment"
+              >
+                บันทึก
+              </button>
+              <button
+                type="button"
+                id="btnClearDepartment"
+              >
+                ล้างข้อมูล
+              </button>
+            </nav>
+          </form>
+        </div>
+      </div>
+
+      <table class="orgTable">
+        <thead>
+          <th>No.</th>
+          <th>Actions</th>
+          <th>ฝ่าย</th>
+          <th>หมายเหตุ</th>
+        </thead>
+        <tbody
+          id="table-body"
+          class="table-body"
+        ></tbody>
+      </table>
+    </div>
+
+    <span id="versionnumber"
+      >parcels app v.1.17102566</span
+    >
+
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/department.js"></script>
+  </body>
+</html>

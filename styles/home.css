@@ -1,0 +1,162 @@
+/** @format */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* topnav */
+.topnav {
+  overflow: hidden;
+  background-color: #04aa6d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topnav p {
+  color: #fff;
+  padding: 14px 16px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #04aa6d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: small;
+  /* Position the tooltip */
+  position: absolute;
+  /* z-index: 1; */
+  /* top: 50px; */
+  margin-left: -90px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* sidebar */
+.sidenav {
+  height: 900px;
+  width: 200px;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  background-color: #b8f0da;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 8px 8px 32px;
+  transition: 0.3s;
+  border-top: 1px solid #d4d1d1;
+  /* border-bottom: 1px solid #d4d1d1; */
+}
+
+.dropdown-btn {
+  display: block;
+  background-color: #b8f0da;
+  font-size: 18px;
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 8px 8px 32px;
+  transition: 0.3s;
+  border-top: 1px solid #d4d1d1;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  width: 100%;
+}
+
+.dropdown-container a:hover {
+  opacity: 0.8;
+  background-color: #04aa6d;
+}
+
+.active {
+  background-color: #55f3b9;
+}
+
+.dropdown-container {
+  /* display: none; */
+  display: block;
+}
+
+.dropdown-container a {
+  font-size: 16px;
+}
+
+#firstsidenav {
+  border-top: none;
+}
+
+.lastsidenav {
+  opacity: 0.8;
+  border-bottom: 1px solid #d4d1d1;
+}
+
+.sidenav a:hover {
+  opacity: 0.8;
+  background-color: #04aa6d;
+  color: #f2f2f2;
+}
+
+.main {
+  margin-left: 200px;
+}
+
+.image-main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-main a {
+  color: #444;
+  background-color: #3fecad;
+  text-decoration: none;
+  width: 150px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-main a:hover {
+  color: #f2f2f2;
+  background-color: #04aa6d;
+}
+
+#versionnumber {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: smaller;
+  color: #222;
+  padding-left: 10px;
+}

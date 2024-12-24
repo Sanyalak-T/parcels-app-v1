@@ -1,0 +1,110 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-security-policy|content-type|default-style|refresh">
+    <title>Equipment Type Page</title>
+    <link rel="stylesheet" href="/styles/materialtype.css" />
+    <link rel="stylesheet" href="/styles/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3a46f2a3e7.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Parcels App</p>
+      <p>Admin</p>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="/view/home.html" id="firstsidenav">หน้าหลัก</a>
+      <button type="button" class="dropdown-btn">องค์กร</button>
+      <div class="dropdown-container">
+        <a href="/view/organization.html">&nbsp; หน่วยงาน</a>
+        <a href="/view/department.html">&nbsp; ฝ่าย</a>
+        <a href="/view/equipmenttype.html">&nbsp; พัสดุ-ประเภทครุภัณฑ์</a>
+        <a href="/view/materialtype.html" class="active"
+          >&nbsp; พัสดุ-ประเภทวัสดุ</a
+        >
+      </div>
+      <a href="/view/parcel.html">การบันทึกพัสดุ</a>
+      <a href="/view/parcelreport.html">พิมพ์รายงานพัสดุ</a>
+      <a href="#" id="logout" class="lastsidenav">ออกจากระบบ</a>
+    </div>
+
+    <div class="main">
+      <nav>
+        <button id="materialtypemodalform" type="button">ประเภทวัสดุ</button>
+        <label >รายการประเภทวัสดุ</label>
+      </nav>
+
+      <div id="modalcontainer" class="modalcontainer">
+        <div id="modal-content" class="card">
+          <form class="addmaterialtypeform" autocomplete="off">
+            <nav>
+              <label >เพิ่มข้อมูล</label>
+              <button id="closemodal" type="button">X</button>
+            </nav>
+
+            <table class="modaltable">
+              <tr>
+                <td><label for="materialtypename">ประเภทวัสดุ</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="materialtypename"
+                    id="materialtypename"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="materialtyperemark">หมายเหตุ</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="materialtyperemark"
+                    id="materialtyperemark"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+            <nav>
+              <button type="submit" id="btnSaveMaterialType">บันทึก</button>
+              <button type="button" id="btnClearMaterailType">
+                ล้างข้อมูล
+              </button>
+            </nav>
+          </form>
+        </div>
+      </div>
+
+      <table class="orgTable">
+        <thead>
+          <th>No.</th>
+          <th>Actions</th>
+          <th>ประเภทวัสดุ</th>
+          <th>หมายเหตุ</th>
+        </thead>
+        <tbody id="table-body" class="table-body"></tbody>
+      </table>
+    </div>
+
+    <span id="versionnumber">parcels app v.3.17102566</span>
+
+    <script src="/scripts/home.js"></script>
+    <script src="/scripts/materialtype.js"></script>
+  </body>
+</html>

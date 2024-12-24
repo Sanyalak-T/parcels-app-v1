@@ -1,0 +1,57 @@
+/** @format */
+
+.container {
+  /* font-family: sans-serif; */
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #04aa6d;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline-style: none;
+  border: 1px solid #04aa6d;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.textcenter {
+  text-align: center;
+  color: #7c7a7a;
+}
+
+span {
+  display: block;
+  color: #7c7a7a;
+  font-size: smaller;
+  text-align: right;
+}
